@@ -8,15 +8,8 @@ public class HelloApp {
         if (args.length == 0) {
             System.out.println("Hello, World!");
         } else {
-            String result = "";
-
-            // Add names with delimiter
-            for (String name : args) {
-                result += name + ", ";
-            }
-
-            // Remove trailing ", " using substring
-            result = result.substring(0, result.length() - 2);
+            // Join all names with comma and space
+            String result = String.join(", ", args);
 
             System.out.println("Hello, " + result + "!");
         }
